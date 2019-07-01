@@ -1,0 +1,3 @@
+ul
+  = for recipe <- @recipes do
+    li = link recipe.character_name, to: recipe_path(@conn, :show, recipe.id)

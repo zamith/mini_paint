@@ -1,0 +1,15 @@
+.Recipe.flex.h-screen
+  div class="Recipe sidebar pt-16"
+    .Logo.mb-16.pl-20
+      .Logo-media.mr-3
+        .Logo-block
+        .Logo-block
+        .Logo-block
+        .Logo-block
+      = link("Back to home", to: recipe_path(@conn, :index), class: "Logo-link")
+    h1.Text.text-5xl.leading-normal.pl-20 = @recipe.character_name
+    h2.Breadcrumb.mb-8 = @recipe.game.name
+
+    .FinalResult.ml-20.text-center
+      = img_tag("https://3.bp.blogspot.com/-IckvvDrnfMQ/WqNEmlp78yI/AAAAAAAAmQk/GFGyYuTzh6wK1GK27dqmuVTYy4KQz7huwCKgBGAs/s1600/IMG_20180307_195632.jpg", class: "FinalResult-mainImage")
+  .flex-grow

@@ -44,6 +44,8 @@ defmodule MiniPaint.Mixfile do
       {:guardian, "~> 1.0"},
       {:comeonin, "~> 4.0"},
       {:bcrypt_elixir, "~> 1.0"},
+      {:plug_cowboy, "~> 1.0"},
+      {:phoenix_slime, "~> 0.10.0"},
       {:ex_machina, "~> 2.2", only: [:dev, :test]}
     ]
   end

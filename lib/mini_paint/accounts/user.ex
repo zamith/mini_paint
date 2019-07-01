@@ -7,8 +7,8 @@ defmodule MiniPaint.Accounts.User do
 
   @fields [
     :email,
-    :password_hash,
-    :username
+    :username,
+    :password_hash
   ]
 
   schema "users" do

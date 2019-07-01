@@ -47,7 +47,12 @@ exports.config = {
     babel: {
       // Do not use ES6 compiler in vendor code
       ignore: [/vendor/]
-    }
+    },
+    postcss: {
+      processors: [
+        require('tailwindcss')('./tailwind.js')
+      ]
+    },
   },
 
   modules: {

@@ -11,8 +11,14 @@ config :mini_paint, MiniPaintWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [node: ["node_modules/brunch/bin/brunch", "watch", "--stdin",
-                    cd: Path.expand("../assets", __DIR__)]]
+  watchers: [
+    node: [
+      "node_modules/brunch/bin/brunch",
+      "watch",
+      "--stdin",
+      cd: Path.expand("../assets", __DIR__)
+    ]
+  ]
 
 # ## SSL Support
 #
@@ -37,7 +43,7 @@ config :mini_paint, MiniPaintWeb.Endpoint,
       ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
       ~r{priv/gettext/.*(po)$},
       ~r{lib/mini_paint_web/views/.*(ex)$},
-      ~r{lib/mini_paint_web/templates/.*(eex)$}
+      ~r{lib/mini_paint_web/templates/.*(eex|slim|slime)$}
     ]
   ]
 
