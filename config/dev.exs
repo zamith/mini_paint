@@ -13,9 +13,10 @@ config :mini_paint, MiniPaintWeb.Endpoint,
   check_origin: false,
   watchers: [
     node: [
-      "node_modules/brunch/bin/brunch",
-      "watch",
-      "--stdin",
+      "node_modules/webpack/bin/webpack.js",
+      "--mode",
+      "development",
+      "--watch-stdin",
       cd: Path.expand("../assets", __DIR__)
     ]
   ]
@@ -56,7 +57,6 @@ config :phoenix, :stacktrace_depth, 20
 
 # Configure your database
 config :mini_paint, MiniPaint.Repo,
-  adapter: Ecto.Adapters.Postgres,
   username: "postgres",
   password: "postgres",
   database: "mini_paint_dev",

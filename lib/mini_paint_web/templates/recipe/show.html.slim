@@ -1,15 +1,57 @@
-.Recipe.flex.h-screen
-  div class="Recipe sidebar pt-16"
-    .Logo.mb-16.pl-20
-      .Logo-media.mr-3
-        .Logo-block
-        .Logo-block
-        .Logo-block
-        .Logo-block
-      = link("Back to home", to: recipe_path(@conn, :index), class: "Logo-link")
-    h1.Text.text-5xl.leading-normal.pl-20 = @recipe.character_name
-    h2.Breadcrumb.mb-8 = @recipe.game.name
+.flex.h-screen
+  div class="pt-16 bg-grayish-blue w-sidebar flex-shrink-0"
+    .flex.items-center.mb-16.pl-20
+      .flex.flex-wrap.justify-between.mr-3.w-5
+        .bg-gray-dark.w-2.h-2.mb-1
+        .bg-gray-dark.w-2.h-2.mb-1
+        .bg-gray-dark.w-2.h-2
+        .bg-gray-dark.w-2.h-2
+      = link("Back to home", to: recipe_path(@conn, :index), class: "text-base no-underline font-bold text-gray-dark")
+    h1.text-gray-dark.text-5xl.leading-normal.pl-20 = @recipe.character_name
+    h2.text-mini-blue.font-normal.text-lg.w-full.pl-20.mb-8.border-solid.border-l-4.border-mini-blue = @recipe.game.name
 
-    .FinalResult.ml-20.text-center
-      = img_tag("https://3.bp.blogspot.com/-IckvvDrnfMQ/WqNEmlp78yI/AAAAAAAAmQk/GFGyYuTzh6wK1GK27dqmuVTYy4KQz7huwCKgBGAs/s1600/IMG_20180307_195632.jpg", class: "FinalResult-mainImage")
-  .flex-grow
+    .ml-20.w-mainImage
+      .text-center.h-mainImage
+        = img_tag("https://3.bp.blogspot.com/-IckvvDrnfMQ/WqNEmlp78yI/AAAAAAAAmQk/GFGyYuTzh6wK1GK27dqmuVTYy4KQz7huwCKgBGAs/s1600/IMG_20180307_195632.jpg", class: "block w-auto h-full my-0 mx-auto shadow-2xl")
+
+      .flex.justify-between.mt-12
+        = img_tag("https://3.bp.blogspot.com/-IckvvDrnfMQ/WqNEmlp78yI/AAAAAAAAmQk/GFGyYuTzh6wK1GK27dqmuVTYy4KQz7huwCKgBGAs/s1600/IMG_20180307_195632.jpg", class: "w-20 h-20 object-contain")
+        = img_tag("https://3.bp.blogspot.com/-IckvvDrnfMQ/WqNEmlp78yI/AAAAAAAAmQk/GFGyYuTzh6wK1GK27dqmuVTYy4KQz7huwCKgBGAs/s1600/IMG_20180307_195632.jpg", class: "w-20 h-20 object-contain")
+        = img_tag("https://3.bp.blogspot.com/-IckvvDrnfMQ/WqNEmlp78yI/AAAAAAAAmQk/GFGyYuTzh6wK1GK27dqmuVTYy4KQz7huwCKgBGAs/s1600/IMG_20180307_195632.jpg", class: "w-20 h-20 object-contain")
+  .flex-grow.mr-24.ml-6
+    .flex.items-center.justify-end.pt-16
+      .text-gray-light.mr-4 Zamith
+      = img_tag("https://3.bp.blogspot.com/-IckvvDrnfMQ/WqNEmlp78yI/AAAAAAAAmQk/GFGyYuTzh6wK1GK27dqmuVTYy4KQz7huwCKgBGAs/s1600/IMG_20180307_195632.jpg", class: "rounded-full h-10 w-10 flex items-center justify-center")
+    .ml-20.mt-16
+      .text-gray-dark.text-3xl Base
+      .ml-6.w-textbox
+        .text-gray-light.mt-6 Colors
+        div.rounded-full.py-1.px-2.border-solid.border.inline-flex.items-center.flex-initial.border-gray-light.mt-4.text-sm
+          .rounded-full.h-4.w-4.flex.items-center.justify-center.mr-2 style="background-color: #D29A09"
+          .text-gray-dark Gold
+
+        .text-gray-light.mt-8 Technique
+        .text-gray-dark.text-lg.mt-4 I actually quite like the relative recent gloss versions of the shades for metal pieces, in this case the gloss version of the fleshshade for the golden/brassish armor pieces.
+
+    .ml-20.mt-16
+      .text-gray-dark.text-3xl Wash
+      .ml-6.w-textbox
+        .text-gray-light.mt-6 Colors
+        .flex.items-center.mt-4
+          div.rounded-full.py-1.px-2.border-solid.border.inline-flex.items-center.flex-initial.border-gray-light.text-sm
+            .rounded-full.h-4.w-4.flex.items-center.justify-center.mr-2.border.border-solid.border-gray-light style="background-color: #27252D"
+            .text-gray-dark Nuln Oil
+          .text-gray-dark.text-sm.ml-4 Body, Head, Metal Plates
+
+        .flex.items-center.mt-4
+          div.rounded-full.py-1.px-2.border-solid.border.inline-flex.items-center.flex-initial.border-gray-light.text-sm
+            .rounded-full.h-4.w-4.flex.items-center.justify-center.mr-2.border.border-solid.border-gray-light style="background: linear-gradient(135deg, #D57850, #D57850 50%, #fff 50%, #fff)"
+            .text-gray-dark Walnut & White
+          .text-gray-dark.text-sm.ml-4 Metal Plates, Shield
+
+        .text-gray-light.mt-8 Technique
+        .text-gray-dark.text-lg.mt-4 I actually quite like the relative recent gloss versions of the shades for metal pieces, in this case the gloss version of the fleshshade for the golden/brassish armor pieces.
+
+
+
+

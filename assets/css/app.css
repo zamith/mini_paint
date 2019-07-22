@@ -1,8 +1,4 @@
 /* This file is for your main application css. */
-@tailwind preflight;
-@tailwind components;
-@tailwind utilities;
+@import "base.css";
 
-* {
-  font-family: "Arimo", sans-serif;
-}
+@tailwind utilities;

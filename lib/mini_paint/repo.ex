@@ -1,5 +1,5 @@
 defmodule MiniPaint.Repo do
-  use Ecto.Repo, otp_app: :mini_paint
+  use Ecto.Repo, otp_app: :mini_paint, adapter: Ecto.Adapters.Postgres
 
   @doc """
   Dynamically loads the repository url from the
